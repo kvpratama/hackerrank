@@ -8,7 +8,7 @@ public class InsertionSort1 {
     }
 
     public void insertionSort1(int[] sortedList){
-        
+
     }
 
 }
