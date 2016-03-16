@@ -19,7 +19,12 @@ public class InsertionSort1 {
     }
 
     public void insertionSort1(int[] sortedList) {
-
+//        for (int i = 0; i < sortedList.length; i++) {
+//            System.out.print(sortedList[i] + " ");
+//        }
+        for (int a : sortedList) {
+            System.out.println(a);
+        }
     }
 
 }
