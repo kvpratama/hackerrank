@@ -40,5 +40,4 @@ public class InsertionSort2 {
         }
         System.out.println("");
     }
-
 }
