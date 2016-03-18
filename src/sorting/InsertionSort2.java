@@ -15,13 +15,28 @@ public class InsertionSort2 {
     }
 
     public static void insertionSortPart2(int[] ar) {
+        int length = ar.length;
+        for (int i = 1; i < length; i++) {
+            if (ar[i] < ar[i - 1]) {
+                ar = sortTarget(ar, i);
+            }
+            printArray(ar);
+        }
+    }
 
-
+    public static int[] sortTarget(int[] ar, int index) {
+        int unsorted = ar[index];
+        while (index > 0 && ar[index - 1] > unsorted) {
+            ar[index] = ar[index - 1];
+            index--;
+        }
+        ar[index] = unsorted;
+        return ar;
     }
 
     private static void printArray(int[] ar) {
-        for(int n: ar){
-            System.out.print(n+" ");
+        for (int n : ar) {
+            System.out.print(n + " ");
         }
         System.out.println("");
     }
