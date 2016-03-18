@@ -1,9 +1,9 @@
 package sorting;
 
+
 import java.util.Scanner;
 
-
-public class InsertionSort1 {
+public class InsertionSort {
 
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
@@ -16,8 +16,8 @@ public class InsertionSort1 {
 //            sortedList[i] = Integer.parseInt(firstLine[i]);
 //        }
 //
-//        InsertionSort1 i = new InsertionSort1();
-//        i.insertionSort1(sortedList);
+//        InsertionSort i = new InsertionSort();
+//        i.insertionSort(sortedList);
         Scanner in = new Scanner(System.in);
         int s = in.nextInt();
         int[] ar = new int[s];
@@ -90,5 +90,6 @@ public class InsertionSort1 {
             System.out.println();
         }
     }
+
 
 }
