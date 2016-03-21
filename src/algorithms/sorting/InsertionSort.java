@@ -15,8 +15,6 @@ public class InsertionSort {
 //            sortedList[i] = Integer.parseInt(firstLine[i]);
 //        }
 //
-//        InsertionSort i = new InsertionSort();
-//        i.insertionSort(sortedList);
         Scanner in = new Scanner(System.in);
         int s = in.nextInt();
         int[] ar = new int[s];
