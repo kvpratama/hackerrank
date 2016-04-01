@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Quicksort1Partition {
 
     static void partition(int[] ar) {
-
         ArrayList<Integer> left = new ArrayList<>();
         ArrayList<Integer> equal = new ArrayList<>();
         ArrayList<Integer> right = new ArrayList<>();
@@ -23,15 +22,13 @@ public class Quicksort1Partition {
             }
         }
 
+        left.addAll(equal);
+        left.addAll(right);
+
         for (int l : left) {
             System.out.print(l + " ");
         }
-        for (int e : equal) {
-            System.out.print(e + " ");
-        }
-        for (int r : right) {
-            System.out.print(r + " ");
-        }
+
     }
 
     public static void main(String[] args) {
