@@ -18,32 +18,27 @@ public class Quicksort2Sorting {
             printArray(ar);
             return ar;
         } else {
-            return partition(ar);
-        }
+            ArrayList<Integer> left = new ArrayList<>();
+            ArrayList<Integer> right = new ArrayList<>();
+            int pivot = ar.get(0);
 
-    }
-
-    static ArrayList<Integer> partition(ArrayList<Integer> ar) {
-        ArrayList<Integer> left = new ArrayList<>();
-        ArrayList<Integer> right = new ArrayList<>();
-        int pivot = ar.get(0);
-
-        for (int i = 1; i < ar.size(); i++){
-            if (ar.get(i) < pivot) {
-                left.add(ar.get(i));
-            } else if (ar.get(i) > pivot) {
-                right.add(ar.get(i));
+            for (int i = 1; i < ar.size(); i++) {
+                if (ar.get(i) < pivot) {
+                    left.add(ar.get(i));
+                } else if (ar.get(i) > pivot) {
+                    right.add(ar.get(i));
+                }
             }
+
+            left = quickSort(left);
+            right = quickSort(right);
+
+            left.add(pivot);
+            left.addAll(right);
+
+            printArray(left);
+            return left;
         }
-
-        left = quickSort(left);
-        right = quickSort(right);
-
-        left.add(pivot);
-        left.addAll(right);
-
-        printArray(left);
-        return left;
     }
 
     static ArrayList<Integer> swap(ArrayList<Integer> ar) {
