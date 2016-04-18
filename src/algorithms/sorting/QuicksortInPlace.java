@@ -51,12 +51,10 @@ public class QuicksortInPlace {
     static int partition(ArrayList<Integer> ar, int lo, int hi) {
         int pivot = ar.get(hi - 1);
         int i = lo;
-        boolean print = false;
         for (int j = lo; j < hi; j++) {
             if (ar.get(j) < pivot) {
                 swap(ar, i, j);
                 i++;
-//                print = true;
             }
         }
         swap(ar, i, hi - 1);
