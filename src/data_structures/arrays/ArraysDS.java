@@ -12,22 +12,15 @@ public class ArraysDS {
         for (int arr_i = 0; arr_i < n; arr_i++) {
             arr[arr_i] = in.nextInt();
         }
-        arr = reverse(arr);
 
-        for (int k : arr) {
-            System.out.print(k + " ");
-        }
+        printReverse(arr);
     }
 
-    static int[] reverse(int[] arr) {
+    static void printReverse(int[] arr) {
         int length = arr.length;
-        int reversed[] = new int[length];
 
-        int j = 0;
         for (int i = length - 1; i >= 0; i--) {
-            reversed[j] = arr[i];
-            j++;
+            System.out.print(arr[i] + " ");
         }
-        return reversed;
     }
 }
