@@ -10,7 +10,29 @@ package data_structures.linked_lists;
   }
 */
 public class InsertNodeAtTail {
-    Node insert (Node head, int data){
+
+    static Node insert (Node head, int data){
+        Node tail = new Node();
+        tail.data = data;
+        if (head == null){
+            return tail;
+        }else{
+            if (head.next == null){
+                head.next = tail;
+            }else{
+                insert(head.next, data);
+            }
+            return head;
+        }
+    }
+
+    static void Print(Node head) {
+        if (head == null) return;
+        System.out.println(head.data);
+        Print(head.next);
+    }
+
+   static Node insert2(Node head,int data) {
         Node tail = new Node();
         tail.data = data;
         tail.next = null;
