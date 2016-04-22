@@ -11,21 +11,19 @@ package data_structures.linked_lists;
   }
 */
 public class InsertNodeNth {
+
     static Node InsertNth(Node head, int data, int position) {
+        Node theNew = new Node();
+        theNew.data = data;
         if (position != 0) {
-            Node target = getNodeAt(head, --position);
-            Node temp = target.next;
-            Node theNew = new Node();
-            theNew.data = data;
-            theNew.next = temp;
-            target.next = theNew;
-        }else{
-            Node temp = head;
-            head = new Node();
-            head.data = data;
-            head.next = temp;
+            Node prev = getNodeAt(head, --position);
+            Node next = prev.next;
+            prev.next = theNew;
+            theNew.next = next;
+            return head;
         }
-        return head;
+        theNew.next = head;
+        return theNew;
     }
 
     static Node getNodeAt(Node head, int position) {
@@ -51,9 +49,7 @@ public class InsertNodeNth {
         c.next = d;
         d.next = e;
 
-//        Node target = getNodeAt(a, 3);
         a = InsertNth(a, 99, 1);
-//        System.out.println(target.data);
         PrintLinkedList.Print(a);
     }
 }
