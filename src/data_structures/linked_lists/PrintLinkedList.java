@@ -15,7 +15,7 @@ package data_structures.linked_lists;
 
 public class PrintLinkedList {
 
-    void Print(Node head) {
+    static void Print(Node head) {
         if (head == null) return;
         System.out.println(head.data);
         Print(head.next);
