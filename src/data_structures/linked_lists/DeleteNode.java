@@ -17,6 +17,14 @@ public class DeleteNode {
         }
     }
 
+    static Node DeleteRec(Node head, int position) {
+        if (position == 0) {
+            return head.next;
+        }
+        head.next = DeleteRec(head.next, --position);
+        return head;
+    }
+
     public static void main(String[] args) {
         Node a = new Node();
         Node b = new Node();
@@ -33,7 +41,7 @@ public class DeleteNode {
         c.next = d;
         d.next = e;
 
-        a = Delete(a, 0);
+        a = DeleteRec(a, 0);
         PrintLinkedList.Print(a);
     }
 }
