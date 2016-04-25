@@ -3,12 +3,9 @@ package data_structures.linked_lists;
 public class PrintInReverse {
 
     static void ReversePrint(Node head) {
-        if (head == null) {
-
-        } else {
+        if (head != null) {
             ReversePrint(head.next);
             System.out.println(head.data);
-
         }
     }
 
