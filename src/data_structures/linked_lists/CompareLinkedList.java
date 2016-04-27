@@ -9,7 +9,7 @@ public class CompareLinkedList {
     static int CompareLists(Node headA, Node headB) {
         if (headA == null && headB == null){
                 return 1;
-        }else if (headA == null ^ headB == null){
+        }else if (headA == null ^ headB == null){ // ^ = xor "this or that, but not both"
             return 0;
         }
         else if (headA.data == headB.data){
