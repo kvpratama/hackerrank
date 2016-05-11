@@ -1,5 +1,7 @@
 package tutorial30daysofcode.Day14Scope;
 
+import java.util.Arrays;
+
 public class Difference {
 
     private int[] elements;
@@ -9,18 +11,8 @@ public class Difference {
         this.elements = elements;
     }
 
-    public int computeDifference(){
-        int length = elements.length, temp;
-
-        for (int i = 0; i < length; i++) {
-            for (int j = i; j < length; j++) {
-                temp = Math.abs(elements[i] - elements[j]);
-                if (temp > maximumDifference){
-                    maximumDifference = temp;
-                }
-            }
-        }
-
-        return maximumDifference;
+    public void computeDifference(){
+        Arrays.sort(elements);
+        maximumDifference = Math.abs(elements[elements.length-1] - elements[0]);
     }
 }
